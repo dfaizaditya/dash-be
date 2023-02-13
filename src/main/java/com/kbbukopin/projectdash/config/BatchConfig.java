@@ -7,7 +7,6 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
@@ -20,6 +19,7 @@ import org.springframework.core.io.ClassPathResource;
 import com.kbbukopin.projectdash.entity.Project;
 import com.kbbukopin.projectdash.listener.ProjectListener;
 import com.kbbukopin.projectdash.repository.ProjectRepository;
+import com.kbbukopin.projectdash.utils.BlankLineRecordSeparatorPolicy;
 
 @Configuration
 @EnableBatchProcessing
@@ -81,7 +81,6 @@ public class BatchConfig {
        return sbf.get("stepA")
                .<Project,Project>chunk(2)
                .reader(reader())
-               .processor(processor())
                .writer(writer())
                .build() 
        ;
