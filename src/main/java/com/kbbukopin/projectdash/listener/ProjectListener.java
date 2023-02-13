@@ -1,9 +1,9 @@
-package com.kbbukopin.projectdash.utils;
+package com.kbbukopin.projectdash.listener;
 
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 
-public class InvoiceListener implements JobExecutionListener{
+public class ProjectListener implements JobExecutionListener{
 
     @Override
     public void beforeJob(JobExecution jobExecution) {

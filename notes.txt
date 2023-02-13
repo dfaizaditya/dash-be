@@ -1,1 +1,3 @@
 https://javatechonline.com/spring-boot-batch-example-csv-to-mysql-using-jpa/
+https://www.dineshonjava.com/spring-batch-read-from-csv-and-write-to-relational-db/
+https://codeburst.io/asynchronous-file-upload-with-node-and-react-ea2ed47306dd
